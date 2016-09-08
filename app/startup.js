@@ -1,4 +1,4 @@
-define(['quark', './components'], function($$, ko) {
+define(['quark', './components', './routes'], function($$) {
     $$.routing.activateHasher();
     $$.start();
 });
