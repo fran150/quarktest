@@ -1,12 +1,12 @@
 define(['quark', 'knockout'], function($$, ko) {
     var pages = {
-        'main':                             { navbar:   'main-test'},
-        'main/docs':                        { layout:   'main-test' },
-        'main/docs/home':                   { content:  'pages-docs-home'},
-        'main/docs/component':              { content:  'pages-docs-component' },
-        'main/std':                         { layout:   'main-test2' },
-        'main/std/home':                    { content:  'pages-home' },
-        'main/std/about':                   { content:  'pages-about'}
+        'main':                             { navbar:   'navbar'},
+        'main/docs':                        { layout:   'navbar' },
+        'main/docs/home':                   { content:  'tasks'},
+        'main/docs/component':              { layout:   'tasks', content:  'tasks-form' },
+        'main/std':                         { layout:   'tasks-form' },
+        'main/std/home':                    { content:  'tasks' },
+        'main/std/about':                   { content:  'tasks'}
     }
 
     var routes = {
