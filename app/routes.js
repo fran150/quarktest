@@ -1,12 +1,16 @@
 define(['quark', 'knockout'], function($$, ko) {
     var pages = {
-        'main':                             { navbar:   'navbar'},
+        'main':                             { navbar:   'navbar' },
         'main/docs':                        { layout:   'navbar' },
-        'main/docs/home':                   { content:  'tasks'},
+        'main/docs/home':                   { content:  'tasks' },
         'main/docs/component':              { layout:   'tasks', content:  'tasks-form' },
         'main/std':                         { layout:   'tasks-form' },
         'main/std/home':                    { content:  'tasks' },
         'main/std/about':                   { content:  'tasks'}
+    }
+
+    var params = {
+        'main/docs/component':              [ 'name' ]
     }
 
     var routes = {
@@ -16,6 +20,6 @@ define(['quark', 'knockout'], function($$, ko) {
         'main/docs/component':          'docs/component/:name:'
     }
 
-    $$.routing.pages(pages);
+    $$.routing.pages(pages, params);
     $$.routing.mapRoute(routes);
 });
