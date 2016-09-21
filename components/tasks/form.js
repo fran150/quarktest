@@ -2,7 +2,11 @@ define(['quark', 'knockout', 'text!./form.html'], function($$, ko, template) {
     function TaskFormComponent(params, $scope, $import) {
         var self = this;
 
-        this.nueva = function() {            
+        $$.parameters({
+            name: ko.observable()
+        }, params, $scope);
+
+        this.nueva = function() {
         }
     }
 
