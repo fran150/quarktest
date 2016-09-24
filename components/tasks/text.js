@@ -7,6 +7,10 @@ define(['quark', 'knockout', 'text!./text.html'], function($$, ko, template) {
         this.setText = function(newText) {
             self.text(newText);
         }
+
+        $$.wait($imports.ready, function() {
+            debugger;
+        });
     }
 
     return $$.component(TextComponent, template);

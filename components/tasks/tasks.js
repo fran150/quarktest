@@ -3,6 +3,7 @@ define(['quark', 'knockout', 'text!./tasks.html'], function($$, ko, template) {
         var self = this;
 
         $$.wait($imports.ready, function() {
+            debugger;
             $imports.get('texto').setText('Hola');
         });
     }
