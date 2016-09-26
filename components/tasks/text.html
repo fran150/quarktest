@@ -1,4 +1,8 @@
 <quark-component>
     <h1>Texto: <span data-bind="text: model.text"></span></h1>
     <tasks-text2 data-bind="import: 'texto2'"></tasks-text2>
+
+    <div data-bind="waitReady: 'texto2'">
+        Dependencia Lista <span data-bind="text: imports.get('texto2').test"></span>
+    </div>
 </quark-component>
